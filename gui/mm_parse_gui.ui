@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>AlexSG</author>
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>440</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>440</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>440</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Парсер сайта &quot;Маленький мир&quot;</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="icon.ico">
+    <normaloff>../icon.ico</normaloff>../icon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>440</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>440</width>
+      <height>220</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>440</width>
+      <height>220</height>
+     </size>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_parser">
+     <attribute name="title">
+      <string>Парсер</string>
+     </attribute>
+     <widget class="QPushButton" name="parse_button">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>140</y>
+        <width>121</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Запустить парсинг</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string>Имя пользователя</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Пароль</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Раздел</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Папка для сохранения результата</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="username_entry">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>10</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="password_entry">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>40</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="section_combo">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>70</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="currentText">
+       <string>Каталог</string>
+      </property>
+      <item>
+       <property name="text">
+        <string extracomment="Весь каталог">Каталог</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Предзаказ</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Карнавал</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Обувь</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Распродажа</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Трикотаж</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Чулочно-носочные изделия</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Шапки</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Школа</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="output_dir_entry">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>100</y>
+        <width>171</width>
+        <height>28</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="open_file_button">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>100</y>
+        <width>30</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_vk_upload">
+     <attribute name="title">
+      <string>Выгрузка в ВК</string>
+     </attribute>
+     <widget class="QPushButton" name="vk_upload_button">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>140</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Выгрузить в ВК</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Логин</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Пароль</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ID группы</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="vk_login_entry">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>10</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="vk_password_entry">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>40</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="group_id_entry">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>70</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="additional_value_entry">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>130</y>
+        <width>71</width>
+        <height>28</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Процент наценки</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Раздел</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="section_combo_vk">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>100</y>
+        <width>200</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string extracomment="Весь каталог">Каталог</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Предзаказ</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Карнавал</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Обувь</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Распродажа</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Трикотаж</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Чулочно-носочные изделия</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Шапки</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Школа</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>440</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Сохранить в файл</string>
+    </property>
+    <addaction name="save_as"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="save_as">
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
