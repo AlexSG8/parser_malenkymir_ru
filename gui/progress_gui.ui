@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>w_vk_upload</class>
- <widget class="QDialog" name="w_vk_upload">
+ <class>w_progress</class>
+ <widget class="QDialog" name="w_progress">
   <property name="windowModality">
    <enum>Qt::ApplicationModal</enum>
   </property>
@@ -35,7 +35,11 @@
    <enum>Qt::NoContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>Выгрузка товаров в ВК</string>
+   <string/>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../nord-tex.shop/icon.png</normaloff>../../nord-tex.shop/icon.png</iconset>
   </property>
   <property name="modal">
    <bool>true</bool>
